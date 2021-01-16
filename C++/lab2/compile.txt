@@ -1,0 +1,941 @@
+test_main.cc: In function ‘void ____C_A_T_C_H____T_E_S_T____12()’:
+test_main.cc:75:13: error: no ‘operator++(int)’ declared for postfix ‘++’ [-fpermissive]
+   75 |     testTime++;
+      |     ~~~~~~~~^~
+test_main.cc: In function ‘void ____C_A_T_C_H____T_E_S_T____14()’:
+test_main.cc:87:13: error: no ‘operator--(int)’ declared for postfix ‘--’ [-fpermissive]
+   87 |     testTime--;
+      |     ~~~~~~~~^~
+test_main.cc: In function ‘void ____C_A_T_C_H____T_E_S_T____18()’:
+test_main.cc:113:10: error: no match for ‘operator<<’ (operand types are ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} and ‘Time’)
+  113 |     test << testTime;
+      |     ~~~~ ^~ ~~~~~~~~
+      |     |       |
+      |     |       Time
+      |     std::string {aka std::__cxx11::basic_string<char>}
+In file included from test_main.cc:2:
+catch.hpp:489:15: note: candidate: ‘std::ostream& operator<<(std::ostream&, Catch_global_namespace_dummy)’
+  489 | std::ostream& operator<<(std::ostream&, Catch_global_namespace_dummy);
+      |               ^~~~~~~~
+catch.hpp:489:26: note:   no known conversion for argument 1 from ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} to ‘std::ostream&’ {aka ‘std::basic_ostream<char>&’}
+  489 | std::ostream& operator<<(std::ostream&, Catch_global_namespace_dummy);
+      |                          ^~~~~~~~~~~~~
+In file included from test_main.cc:4:
+time.h:46:15: note: candidate: ‘std::ostream& operator<<(std::ostream&, const Time&)’
+   46 | std::ostream &operator<<(std::ostream& output, Time const& time);
+      |               ^~~~~~~~
+time.h:46:40: note:   no known conversion for argument 1 from ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} to ‘std::ostream&’ {aka ‘std::basic_ostream<char>&’}
+   46 | std::ostream &operator<<(std::ostream& output, Time const& time);
+      |                          ~~~~~~~~~~~~~~^~~~~~
+In file included from /usr/include/c++/9/regex:62,
+                 from catch.hpp:11646,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/regex.h:1553:5: note: candidate: ‘template<class _Ch_type, class _Ch_traits, class _Bi_iter> std::basic_ostream<_CharT, _Traits>& std::__cxx11::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::sub_match<_Bi_iter>&)’
+ 1553 |     operator<<(basic_ostream<_Ch_type, _Ch_traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/regex.h:1553:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/string:55,
+                 from catch.hpp:484,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/basic_string.h:6416:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)’
+ 6416 |     operator<<(basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/basic_string.h:6416:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/bits/ios_base.h:46,
+                 from /usr/include/c++/9/ios:42,
+                 from /usr/include/c++/9/ostream:38,
+                 from catch.hpp:1430,
+                 from test_main.cc:2:
+/usr/include/c++/9/system_error:217:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::error_code&)’
+  217 |     operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+      |     ^~~~~~~~
+/usr/include/c++/9/system_error:217:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from catch.hpp:1430,
+                 from test_main.cc:2:
+/usr/include/c++/9/ostream:506:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)’
+  506 |     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+      |     ^~~~~~~~
+/usr/include/c++/9/ostream:506:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from catch.hpp:1430,
+                 from test_main.cc:2:
+/usr/include/c++/9/ostream:511:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)’
+  511 |     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+      |     ^~~~~~~~
+/usr/include/c++/9/ostream:511:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from catch.hpp:1430,
+                 from test_main.cc:2:
+/usr/include/c++/9/ostream:517:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)’
+  517 |     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+      |     ^~~~~~~~
+/usr/include/c++/9/ostream:517:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<char, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from catch.hpp:1430,
+                 from test_main.cc:2:
+/usr/include/c++/9/ostream:523:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)’
+  523 |     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+      |     ^~~~~~~~
+/usr/include/c++/9/ostream:523:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<char, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from catch.hpp:1430,
+                 from test_main.cc:2:
+/usr/include/c++/9/ostream:528:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)’
+  528 |     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+      |     ^~~~~~~~
+/usr/include/c++/9/ostream:528:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<char, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from catch.hpp:1430,
+                 from test_main.cc:2:
+/usr/include/c++/9/ostream:548:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)’
+  548 |     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+      |     ^~~~~~~~
+/usr/include/c++/9/ostream:548:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/ostream:702,
+                 from catch.hpp:1430,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/ostream.tcc:321:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)’
+  321 |     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from catch.hpp:1430,
+                 from test_main.cc:2:
+/usr/include/c++/9/ostream:565:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)’
+  565 |     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+      |     ^~~~~~~~
+/usr/include/c++/9/ostream:565:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<char, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from catch.hpp:1430,
+                 from test_main.cc:2:
+/usr/include/c++/9/ostream:578:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)’
+  578 |     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+      |     ^~~~~~~~
+/usr/include/c++/9/ostream:578:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<char, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from catch.hpp:1430,
+                 from test_main.cc:2:
+/usr/include/c++/9/ostream:583:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)’
+  583 |     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+      |     ^~~~~~~~
+/usr/include/c++/9/ostream:583:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<char, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from catch.hpp:1430,
+                 from test_main.cc:2:
+/usr/include/c++/9/ostream:691:5: note: candidate: ‘template<class _Ostream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_ostream<_Ostream>, std::__is_insertable<typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type, const _Tp&, void> >::value, typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type>::type std::operator<<(_Ostream&&, const _Tp&)’
+  691 |     operator<<(_Ostream&& __os, const _Tp& __x)
+      |     ^~~~~~~~
+/usr/include/c++/9/ostream:691:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/9/ostream: In substitution of ‘template<class _Ostream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_ostream<_Ostream>, std::__is_insertable<typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type, const _Tp&, void> >::value, typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type>::type std::operator<<(_Ostream&&, const _Tp&) [with _Ostream = std::__cxx11::basic_string<char>&; _Tp = Time]’:
+test_main.cc:113:13:   required from here
+/usr/include/c++/9/ostream:691:5: error: no type named ‘type’ in ‘struct std::enable_if<false, void>’
+In file included from /usr/include/c++/9/memory:81,
+                 from catch.hpp:2955,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/shared_ptr.h:66:5: note: candidate: ‘template<class _Ch, class _Tr, class _Tp, __gnu_cxx::_Lock_policy _Lp> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__shared_ptr<_Tp, _Lp>&)’
+   66 |     operator<<(std::basic_ostream<_Ch, _Tr>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/shared_ptr.h:66:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:49,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.h:1298:5: note: candidate: ‘template<class _RandomNumberEngine, long unsigned int __w, class _UIntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::independent_bits_engine<_RandomNumberEngine, __w, _UIntType>&)’
+ 1298 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.h:1298:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:877:5: note: candidate: ‘template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::uniform_int_distribution<_IntType>&)’
+  877 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:877:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:936:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::uniform_real_distribution<_IntType>&)’
+  936 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:936:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:2133:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::cauchy_distribution<_RealType>&)’
+ 2133 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:2133:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:998:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::bernoulli_distribution&)’
+  998 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:998:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:1080:5: note: candidate: ‘template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::geometric_distribution<_IntType>&)’
+ 1080 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:1080:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:1737:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::exponential_distribution<_RealType>&)’
+ 1737 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:1737:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:2532:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::weibull_distribution<_RealType>&)’
+ 2532 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:2532:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:2608:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::extreme_value_distribution<_RealType>&)’
+ 2608 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:2608:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:154:5: note: candidate: ‘template<class _UIntType, _UIntType __a, _UIntType __c, _UIntType __m, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::linear_congruential_engine<_UIntType, __a, __c, __m>&)’
+  154 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:154:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:476:5: note: candidate: ‘template<class _UIntType1, long unsigned int __w1, long unsigned int __n1, long unsigned int __m1, long unsigned int __r1, _UIntType1 __a1, long unsigned int __u1, _UIntType1 __d1, long unsigned int __s1, _UIntType1 __b1, long unsigned int __t1, _UIntType1 __c1, long unsigned int __l1, _UIntType1 __f1, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d, __s, __b, __t, __c, __l, __f>&)’
+  476 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:476:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:632:5: note: candidate: ‘template<class _UIntType, long unsigned int __w, long unsigned int __s, long unsigned int __r, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::subtract_with_carry_engine<_UIntType, __w, __s, __r>&)’
+  632 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:632:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:702:5: note: candidate: ‘template<class _RandomNumberEngine, long unsigned int __p, long unsigned int __r, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::discard_block_engine<_RandomNumberEngine, __p, __r>&)’
+  702 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:702:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:831:5: note: candidate: ‘template<class _RandomNumberEngine, long unsigned int __k, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::shuffle_order_engine<_RandomNumberEngine, __k>&)’
+  831 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:831:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:1195:5: note: candidate: ‘template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::negative_binomial_distribution<_IntType>&)’
+ 1195 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:1195:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:1406:5: note: candidate: ‘template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::poisson_distribution<_IntType>&)’
+ 1406 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:1406:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:1673:5: note: candidate: ‘template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::binomial_distribution<_IntType>&)’
+ 1673 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:1673:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:1904:5: note: candidate: ‘template<class _RealType1, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::normal_distribution<_RealType>&)’
+ 1904 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:1904:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:1973:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::lognormal_distribution<_RealType>&)’
+ 1973 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:1973:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:2046:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::chi_squared_distribution<_RealType>&)’
+ 2046 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:2046:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:2210:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::fisher_f_distribution<_RealType>&)’
+ 2210 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:2210:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:2285:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::student_t_distribution<_RealType>&)’
+ 2285 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:2285:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:2454:5: note: candidate: ‘template<class _RealType1, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::gamma_distribution<_RealType>&)’
+ 2454 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:2454:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:2744:5: note: candidate: ‘template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::discrete_distribution<_IntType>&)’
+ 2744 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:2744:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:2967:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::piecewise_constant_distribution<_RealType>&)’
+ 2967 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:2967:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:3174:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::piecewise_linear_distribution<_RealType>&)’
+ 3174 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:3174:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from catch.hpp:11193,
+                 from test_main.cc:2:
+/usr/include/c++/9/iomanip:79:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Resetiosflags)’
+   79 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
+      |     ^~~~~~~~
+/usr/include/c++/9/iomanip:79:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from catch.hpp:11193,
+                 from test_main.cc:2:
+/usr/include/c++/9/iomanip:109:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setiosflags)’
+  109 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
+      |     ^~~~~~~~
+/usr/include/c++/9/iomanip:109:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from catch.hpp:11193,
+                 from test_main.cc:2:
+/usr/include/c++/9/iomanip:143:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setbase)’
+  143 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
+      |     ^~~~~~~~
+/usr/include/c++/9/iomanip:143:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from catch.hpp:11193,
+                 from test_main.cc:2:
+/usr/include/c++/9/iomanip:178:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setfill<_CharT>)’
+  178 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
+      |     ^~~~~~~~
+/usr/include/c++/9/iomanip:178:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from catch.hpp:11193,
+                 from test_main.cc:2:
+/usr/include/c++/9/iomanip:208:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setprecision)’
+  208 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
+      |     ^~~~~~~~
+/usr/include/c++/9/iomanip:208:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from catch.hpp:11193,
+                 from test_main.cc:2:
+/usr/include/c++/9/iomanip:238:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setw)’
+  238 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
+      |     ^~~~~~~~
+/usr/include/c++/9/iomanip:238:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from catch.hpp:11193,
+                 from test_main.cc:2:
+/usr/include/c++/9/iomanip:311:5: note: candidate: ‘template<class _CharT, class _Traits, class _MoneyT> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_money<_MoneyT>)’
+  311 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_money<_MoneyT> __f)
+      |     ^~~~~~~~
+/usr/include/c++/9/iomanip:311:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from catch.hpp:11193,
+                 from test_main.cc:2:
+/usr/include/c++/9/iomanip:363:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_time<_CharT>)’
+  363 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_time<_CharT> __f)
+      |     ^~~~~~~~
+/usr/include/c++/9/iomanip:363:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/regex:39,
+                 from catch.hpp:11646,
+                 from test_main.cc:2:
+/usr/include/c++/9/bitset:1538:5: note: candidate: ‘template<class _CharT, class _Traits, long unsigned int _Nb> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::bitset<_Nb>&)’
+ 1538 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/9/bitset:1538:5: note:   template argument deduction/substitution failed:
+test_main.cc:113:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  113 |     test << testTime;
+      |             ^~~~~~~~
+test_main.cc: In function ‘void ____C_A_T_C_H____T_E_S_T____20()’:
+test_main.cc:122:10: error: no match for ‘operator>>’ (operand types are ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} and ‘Time’)
+  122 |     test >> testTime;
+      |     ~~~~ ^~ ~~~~~~~~
+      |     |       |
+      |     |       Time
+      |     std::string {aka std::__cxx11::basic_string<char>}
+In file included from test_main.cc:4:
+time.h:47:15: note: candidate: ‘std::istream& operator>>(std::istream&, Time&)’
+   47 | std::istream &operator>>(std::istream& input, Time& time);
+      |               ^~~~~~~~
+time.h:47:40: note:   no known conversion for argument 1 from ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} to ‘std::istream&’ {aka ‘std::basic_istream<char>&’}
+   47 | std::istream &operator>>(std::istream& input, Time& time);
+      |                          ~~~~~~~~~~~~~~^~~~~
+In file included from /usr/include/c++/9/string:56,
+                 from catch.hpp:484,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/basic_string.tcc:1466:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)’
+ 1466 |     operator>>(basic_istream<_CharT, _Traits>& __in,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/basic_string.tcc:1466:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:898:5: note: candidate: ‘template<class _IntType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::uniform_int_distribution<_IntType>&)’
+  898 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:898:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:960:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::uniform_real_distribution<_IntType>&)’
+  960 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:960:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:2157:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::cauchy_distribution<_RealType>&)’
+ 2157 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:2157:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:49,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.h:3714:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::bernoulli_distribution&)’
+ 3714 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.h:3714:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:1104:5: note: candidate: ‘template<class _IntType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::geometric_distribution<_IntType>&)’
+ 1104 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:1104:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:1760:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::exponential_distribution<_RealType>&)’
+ 1760 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:1760:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:2556:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::weibull_distribution<_RealType>&)’
+ 2556 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:2556:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:2632:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::extreme_value_distribution<_RealType>&)’
+ 2632 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:2632:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:176:5: note: candidate: ‘template<class _UIntType, _UIntType __a, _UIntType __c, _UIntType __m, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::linear_congruential_engine<_UIntType, __a, __c, __m>&)’
+  176 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:176:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:504:5: note: candidate: ‘template<class _UIntType1, long unsigned int __w1, long unsigned int __n1, long unsigned int __m1, long unsigned int __r1, _UIntType1 __a1, long unsigned int __u1, _UIntType1 __d1, long unsigned int __s1, _UIntType1 __b1, long unsigned int __t1, _UIntType1 __c1, long unsigned int __l1, _UIntType1 __f1, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d, __s, __b, __t, __c, __l, __f>&)’
+  504 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:504:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:657:5: note: candidate: ‘template<class _UIntType, long unsigned int __w, long unsigned int __s, long unsigned int __r, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::subtract_with_carry_engine<_UIntType, __w, __s, __r>&)’
+  657 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:657:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:725:5: note: candidate: ‘template<class _RandomNumberEngine, long unsigned int __p, long unsigned int __r, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::discard_block_engine<_RandomNumberEngine, __p, __r>&)’
+  725 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:725:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:856:5: note: candidate: ‘template<class _RandomNumberEngine, long unsigned int __k, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::shuffle_order_engine<_RandomNumberEngine, __k>&)’
+  856 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:856:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:1220:5: note: candidate: ‘template<class _IntType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::negative_binomial_distribution<_IntType>&)’
+ 1220 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:1220:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:1431:5: note: candidate: ‘template<class _IntType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::poisson_distribution<_IntType>&)’
+ 1431 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:1431:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:1699:5: note: candidate: ‘template<class _IntType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::binomial_distribution<_IntType>&)’
+ 1699 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:1699:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:1931:5: note: candidate: ‘template<class _RealType1, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::normal_distribution<_RealType>&)’
+ 1931 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:1931:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:1998:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::lognormal_distribution<_RealType>&)’
+ 1998 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:1998:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:2070:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::chi_squared_distribution<_RealType>&)’
+ 2070 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:2070:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:2235:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::fisher_f_distribution<_RealType>&)’
+ 2235 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:2235:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:2309:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::student_t_distribution<_RealType>&)’
+ 2309 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:2309:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:2479:5: note: candidate: ‘template<class _RealType1, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::gamma_distribution<_RealType>&)’
+ 2479 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:2479:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:2791:5: note: candidate: ‘template<class _IntType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::discrete_distribution<_IntType>&)’
+ 2791 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:2791:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:2999:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::piecewise_constant_distribution<_RealType>&)’
+ 2999 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:2999:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/random:51,
+                 from catch.hpp:4599,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/random.tcc:3206:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::piecewise_linear_distribution<_RealType>&)’
+ 3206 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/random.tcc:3206:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/istream:991,
+                 from /usr/include/c++/9/sstream:38,
+                 from catch.hpp:8486,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/istream.tcc:931:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, _CharT&)’
+  931 |     operator>>(basic_istream<_CharT, _Traits>& __in, _CharT& __c)
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/istream.tcc:931:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/sstream:38,
+                 from catch.hpp:8486,
+                 from test_main.cc:2:
+/usr/include/c++/9/istream:756:5: note: candidate: ‘template<class _Traits> std::basic_istream<char, _Traits>& std::operator>>(std::basic_istream<char, _Traits>&, unsigned char&)’
+  756 |     operator>>(basic_istream<char, _Traits>& __in, unsigned char& __c)
+      |     ^~~~~~~~
+/usr/include/c++/9/istream:756:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<char, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/sstream:38,
+                 from catch.hpp:8486,
+                 from test_main.cc:2:
+/usr/include/c++/9/istream:761:5: note: candidate: ‘template<class _Traits> std::basic_istream<char, _Traits>& std::operator>>(std::basic_istream<char, _Traits>&, signed char&)’
+  761 |     operator>>(basic_istream<char, _Traits>& __in, signed char& __c)
+      |     ^~~~~~~~
+/usr/include/c++/9/istream:761:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<char, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/istream:991,
+                 from /usr/include/c++/9/sstream:38,
+                 from catch.hpp:8486,
+                 from test_main.cc:2:
+/usr/include/c++/9/bits/istream.tcc:963:5: note: candidate: ‘template<class _CharT2, class _Traits2> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, _CharT2*)’
+  963 |     operator>>(basic_istream<_CharT, _Traits>& __in, _CharT* __s)
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/istream.tcc:963:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/sstream:38,
+                 from catch.hpp:8486,
+                 from test_main.cc:2:
+/usr/include/c++/9/istream:803:5: note: candidate: ‘template<class _Traits> std::basic_istream<char, _Traits>& std::operator>>(std::basic_istream<char, _Traits>&, unsigned char*)’
+  803 |     operator>>(basic_istream<char, _Traits>& __in, unsigned char* __s)
+      |     ^~~~~~~~
+/usr/include/c++/9/istream:803:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<char, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/sstream:38,
+                 from catch.hpp:8486,
+                 from test_main.cc:2:
+/usr/include/c++/9/istream:808:5: note: candidate: ‘template<class _Traits> std::basic_istream<char, _Traits>& std::operator>>(std::basic_istream<char, _Traits>&, signed char*)’
+  808 |     operator>>(basic_istream<char, _Traits>& __in, signed char* __s)
+      |     ^~~~~~~~
+/usr/include/c++/9/istream:808:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<char, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/sstream:38,
+                 from catch.hpp:8486,
+                 from test_main.cc:2:
+/usr/include/c++/9/istream:980:5: note: candidate: ‘template<class _Istream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_istream<_Istream>, std::__is_extractable<typename std::__is_convertible_to_basic_istream<_Tp>::__istream_type, _Tp&&, void> >::value, typename std::__is_convertible_to_basic_istream<_Tp>::__istream_type>::type std::operator>>(_Istream&&, _Tp&&)’
+  980 |     operator>>(_Istream&& __is, _Tp&& __x)
+      |     ^~~~~~~~
+/usr/include/c++/9/istream:980:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/9/istream: In substitution of ‘template<class _Istream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_istream<_Istream>, std::__is_extractable<typename std::__is_convertible_to_basic_istream<_Tp>::__istream_type, _Tp&&, void> >::value, typename std::__is_convertible_to_basic_istream<_Tp>::__istream_type>::type std::operator>>(_Istream&&, _Tp&&) [with _Istream = std::__cxx11::basic_string<char>&; _Tp = Time&]’:
+test_main.cc:122:13:   required from here
+/usr/include/c++/9/istream:980:5: error: no type named ‘type’ in ‘struct std::enable_if<false, void>’
+In file included from catch.hpp:11193,
+                 from test_main.cc:2:
+/usr/include/c++/9/iomanip:71:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::_Resetiosflags)’
+   71 |     operator>>(basic_istream<_CharT, _Traits>& __is, _Resetiosflags __f)
+      |     ^~~~~~~~
+/usr/include/c++/9/iomanip:71:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from catch.hpp:11193,
+                 from test_main.cc:2:
+/usr/include/c++/9/iomanip:101:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::_Setiosflags)’
+  101 |     operator>>(basic_istream<_CharT, _Traits>& __is, _Setiosflags __f)
+      |     ^~~~~~~~
+/usr/include/c++/9/iomanip:101:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from catch.hpp:11193,
+                 from test_main.cc:2:
+/usr/include/c++/9/iomanip:132:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::_Setbase)’
+  132 |     operator>>(basic_istream<_CharT, _Traits>& __is, _Setbase __f)
+      |     ^~~~~~~~
+/usr/include/c++/9/iomanip:132:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from catch.hpp:11193,
+                 from test_main.cc:2:
+/usr/include/c++/9/iomanip:170:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::_Setfill<_CharT>)’
+  170 |     operator>>(basic_istream<_CharT, _Traits>& __is, _Setfill<_CharT> __f)
+      |     ^~~~~~~~
+/usr/include/c++/9/iomanip:170:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from catch.hpp:11193,
+                 from test_main.cc:2:
+/usr/include/c++/9/iomanip:200:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::_Setprecision)’
+  200 |     operator>>(basic_istream<_CharT, _Traits>& __is, _Setprecision __f)
+      |     ^~~~~~~~
+/usr/include/c++/9/iomanip:200:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from catch.hpp:11193,
+                 from test_main.cc:2:
+/usr/include/c++/9/iomanip:230:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::_Setw)’
+  230 |     operator>>(basic_istream<_CharT, _Traits>& __is, _Setw __f)
+      |     ^~~~~~~~
+/usr/include/c++/9/iomanip:230:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from catch.hpp:11193,
+                 from test_main.cc:2:
+/usr/include/c++/9/iomanip:264:5: note: candidate: ‘template<class _CharT, class _Traits, class _MoneyT> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::_Get_money<_MoneyT>)’
+  264 |     operator>>(basic_istream<_CharT, _Traits>& __is, _Get_money<_MoneyT> __f)
+      |     ^~~~~~~~
+/usr/include/c++/9/iomanip:264:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from catch.hpp:11193,
+                 from test_main.cc:2:
+/usr/include/c++/9/iomanip:418:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::_Get_time<_CharT>)’
+  418 |     operator>>(basic_istream<_CharT, _Traits>& __is, _Get_time<_CharT> __f)
+      |     ^~~~~~~~
+/usr/include/c++/9/iomanip:418:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~
+In file included from /usr/include/c++/9/regex:39,
+                 from catch.hpp:11646,
+                 from test_main.cc:2:
+/usr/include/c++/9/bitset:1470:5: note: candidate: ‘template<class _CharT, class _Traits, long unsigned int _Nb> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::bitset<_Nb>&)’
+ 1470 |     operator>>(std::basic_istream<_CharT, _Traits>& __is, bitset<_Nb>& __x)
+      |     ^~~~~~~~
+/usr/include/c++/9/bitset:1470:5: note:   template argument deduction/substitution failed:
+test_main.cc:122:13: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
+  122 |     test >> testTime;
+      |             ^~~~~~~~

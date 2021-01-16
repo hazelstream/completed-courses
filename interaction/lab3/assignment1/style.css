@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bluecircle {
+    display: block;
+    background-color: blue;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}

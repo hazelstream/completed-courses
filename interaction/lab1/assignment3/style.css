@@ -1,0 +1,48 @@
+body {
+    background-color: rgb(202, 202, 202);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.wrapper {
+    background-color: whitesmoke;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.meny {
+    background-color: black;
+    color: whitesmoke;
+    display: flex;
+    padding: 5px;
+}
+
+.items {
+    display: flex;
+    justify-content: space-around;
+}
+
+.column {
+    width: 33%;
+    text-align: center;
+}
+
+.items .column {
+    width: 30%;
+    padding: 2%;
+    text-align: left;
+}
+
+footer {
+    background-color: black;
+    color: whitesmoke;
+    padding: 5px;
+    text-align: center;
+}
+
+p {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px; 
+}
+
+
+

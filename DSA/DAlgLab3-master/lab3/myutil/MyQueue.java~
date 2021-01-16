@@ -1,0 +1,36 @@
+package myutil;
+
+public class MyQueue<T> {
+	
+	private Node<T> first;
+	private Node<T> last;
+	
+	public MyQueue() {
+		
+	}
+
+	
+	public void enqueue(T element) {
+		Node<T> temp = new Node<>(element);
+		
+		if (first == null) {
+			first = temp;
+			last = temp;
+		}
+		
+		last.setNext(temp);
+		last = temp;
+	}
+	
+	public T dequeue() {
+		T sum;
+		
+		
+		sum = first.getData();
+		first = first.getNext();		
+				
+		return sum;
+	}
+	
+	
+}

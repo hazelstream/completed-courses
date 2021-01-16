@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainWrapper {
+    display: flex;
+}
+
+.wrapper {
+    margin: 1% 1%;
+}
+
+#mytextarea {
+    margin-top: 15%;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    padding: 0.5rem 0.5rem;
+}
+
+#mytextarea:focus {
+    content: "This text replaces the original.";
+}
+
+p{
+    font-family: Papyrus;
+}
+ 
+.underText {
+    margin-top: 2%;
+    margin-right: 2%;
+    
+}
+
+button {
+    width: 120px;
+    height: 30px;
+    border: 1px solid #999;
+    font-size: 18px;
+    color: #02030c;
+    background-color: #eee;
+    border-radius: 5px;
+    box-shadow: 1px 1px #ccc;
+}
+
+.dropdown {
+    width: 120px;
+    height: 30px;
+    border: 1px solid #999;
+    font-size: 18px;
+    color: #02030c;
+    background-color: #eee;
+    border-radius: 5px;
+    box-shadow: 1px 1px #ccc;
+}
+
+
+
+

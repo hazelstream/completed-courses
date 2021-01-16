@@ -1,0 +1,7 @@
+Eftersom sökningen inte är viktad mot upptagna platser så är sannolikheten lika stor att platsen är tom som att den är full. 
+Sannolikheten att hashningen get ett värde är det samma som vilket annat.
+
+Slutsatser man kan dra är att kollisioner alltid kommer att ske och att hantera dem är det viktigaste man kan göra för att optimera sin algoritm. 
+Att anpassa sin hashningsfunktion efter vad man ska stoppa in i tabellen är viktigt för att få en bra spridning på inputen så att man slipper rehasha ofta, dyrt tisdsmässigt.
+
+
